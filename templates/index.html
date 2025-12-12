@@ -7,7 +7,7 @@
         <!-- picocss.com/ -->
         <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css"
             >
         <title>Youtube to music downloader</title>
     </head>
@@ -19,7 +19,17 @@
 
         <form method="POST" action="/">
             <input type="text" id="user_input" name="user_input" placeholder="Youtube Url">
+           <select id="select" name="select" required>
+                <option value="mp3">mp3</option>
+                <option value="m4a" selected >m4a</option>
+             </select>
             <input type="submit" value="Download">
+             <section id="progress">
+       
+        
+        <progress hidden id="progress-2"></progress>
+      </section>
+             
         </form>
         </section>
         </main>
