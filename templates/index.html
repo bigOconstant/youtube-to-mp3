@@ -9,29 +9,36 @@
             rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css"
             >
+             <link
+            rel="stylesheet"
+      href="{{ HOME }}/static/css/main.css"
+            >
         <title>Youtube to music downloader</title>
     </head>
     <body>
+      
       <main>
       <!-- Preview -->
       <section id="preview">
-        <h2>Download Music</h2>
+        <h2>Download Youtube Audio</h2>
 
-        <form method="POST" action="/">
+        <form  id="myForm" method="POST" action="/">
             <input type="text" id="user_input" name="user_input" placeholder="Youtube Url">
            <select id="select" name="select" required>
                 <option value="mp3">mp3</option>
                 <option value="m4a" selected >m4a</option>
              </select>
-            <input type="submit" value="Download">
+            <input id="submitButton" type="submit" value="Download">
              <section id="progress">
        
-        
-        <progress hidden id="progress-2"></progress>
+       
+        <progress class="hidden" id="progress-2"></progress>
+     
       </section>
              
         </form>
         </section>
         </main>
+        <script src="{{ HOME }}/static/js/main.js"></script>
     </body>
     </html>
