@@ -1,6 +1,6 @@
 # Use the latest official Python image (pin for reproducibility if desired)
 FROM python:latest
-
+RUN apt-get update && apt-get install -y ffmpeg
 # Set working directory
 WORKDIR /app
 
